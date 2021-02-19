@@ -1,0 +1,9 @@
+# custom vars will be put here
+
+# Github Username + Email
+git_user_name: __YOUR_GITHUB_USERNAME__
+git_user_email: __YOUR_GITHUB_EMAIL__
+
+# AWS Access/Secret Key
+aws_access_key: __ACCESS_KEY__
+aws_secret_key: __SECRET_KEY__

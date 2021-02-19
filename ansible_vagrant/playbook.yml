@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  become: true
+  become_method: sudo
+
+  vars:
+    terraform_version: "0.14.5"
+    nodesource_nodejs_version: "14"
+    zulu_openjdk_version: "15"
+    aws_user: vagrant
+    aws_region: eu-central-1
+
+  pre_tasks:
+  - name: Include custom_vars.yml
+    include_vars:
+      file: custom_vars.yml
+
+  roles:
+  - andrelohmann.root_colored_prompt
+  - andrelohmann.nodesource
+  - andrelohmann.zulu_openjdk
+  - andrelohmann.awscli
+  - andrelohmann.terraform
+  - install_dependencies
+
+...

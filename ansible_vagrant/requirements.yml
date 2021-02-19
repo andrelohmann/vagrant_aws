@@ -1,0 +1,7 @@
+---
+- andrelohmann.root_colored_prompt
+- andrelohmann.nodesource
+- andrelohmann.zulu_openjdk
+- andrelohmann.awscli
+- andrelohmann.terraform
+...

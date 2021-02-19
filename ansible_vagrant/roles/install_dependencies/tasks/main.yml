@@ -1,0 +1,32 @@
+---
+
+- name: install required packages
+  apt:
+    name: "{{ required_packages }}"
+    state: latest
+    dpkg_options: 'force-confnew,force-confdef'
+    autoclean: yes
+    autoremove: yes
+    update_cache: yes
+    cache_valid_time: 3600
+  vars:
+    required_packages:
+    - git
+    - jq
+    - maven
+
+- name: set git user.name
+  command: git config --global user.name "{{ git_user_name }}"
+  become_user: vagrant
+
+- name: set git user.email
+  command: git config --global user.email "{{ git_user_email }}"
+  become_user: vagrant
+
+- name: install aws-cdk
+  npm:
+    name: aws-cdk
+    global: yes
+
+
+...
