@@ -1,3 +1,4 @@
+/.vagrant
 /cdk/*
 !/cdk/.keep
 /terraform/*
