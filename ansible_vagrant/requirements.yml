@@ -4,4 +4,5 @@
 - andrelohmann.zulu_openjdk
 - andrelohmann.awscli
 - andrelohmann.terraform
+- andrelohmann.terragrunt
 ...
